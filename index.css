@@ -171,6 +171,7 @@ nav a {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-bottom: 25px;
 }
 
 .news-item:nth-child(2) {
