@@ -148,13 +148,13 @@ nav a {
 .news {
   background-color: #eaeaea;
   width: 100%;
-  height: 1000px;
+  padding-top: 300px;
+  padding-bottom: 300px;
   display: flex;
   align-items: center;
 }
 
 .news-container {
-  height: 485px;
   width: 100%;
   background-color: #ffffff;
 }
@@ -209,4 +209,60 @@ nav a {
 .team-member:nth-child(2) {
   margin-left: 125px;
   margin-right: 125px;
+}
+
+@media screen and (max-width: 540px) {
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 12px;
+  }
+  .main-title > h1 {
+    letter-spacing: 2px;
+    font-size: 72px;
+  }
+
+  .main-title > h2 {
+    font-size: 36px;
+  }
+
+  .toolkit {
+    height: 300px;
+  }
+
+  .toolkit-content {
+    height: 300px;
+  }
+
+  .toolkit-desc {
+    width: 150px;
+  }
+  .toolkit-desc > h2 {
+    margin-bottom: 10px;
+  }
+  .toolkit-desc > h4 {
+    margin-bottom: 5px;
+  }
+  .news {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .news-item-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-item {
+    margin-bottom: 50px;
+  }
+
+  .team-member-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    margin-bottom: 50px;
+  }
 }
