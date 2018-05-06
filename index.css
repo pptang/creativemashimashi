@@ -9,10 +9,11 @@ body {
 .top {
   display: flex;
   background-color: #fc5d60;
-  height: 620px;
   width: 100%;
   box-sizing: border-box;
   color: #ffffff;
+  justify-content: center;
+  padding-bottom: 150px;
 }
 
 nav a {
@@ -22,19 +23,32 @@ nav a {
 }
 
 .main-title {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
 }
 
-h1 {
-  font-size: 72px;
-  text-align: center;
+.main-title > h1 {
+  letter-spacing: 5px;
+  font-size: 144px;
   margin: 0;
 }
 
 .main-title > h2 {
-  font-size: 48px;
-  text-align: center;
+  font-size: 72px;
+  align-self: flex-end;
   margin: 0;
+  transform: rotate(-10deg);
+  animation: infinite-showing 3s infinite;
+}
+
+@keyframes infinite-showing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header {
@@ -57,14 +71,14 @@ h1 {
 .toolkit {
   background-color: #ffffff;
   width: 100%;
-  height: 680px;
+  height: 500px;
   display: flex;
   justify-content: center;
 }
 
 .toolkit-content {
-  height: calc(100% + 100px);
-  width: 90%;
+  width: 70%;
+  height: 600px;
   background-image: url('./papers.jpg');
   background-position: center;
   background-size: cover;
@@ -79,13 +93,33 @@ h1 {
   position: absolute;
   bottom: -75px;
   left: 25px;
-  padding: 15px;
+  padding: 10px 15px;
+  padding-top: 10px;
+  padding-left: 15px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
-.toolkit-desc > h2,
+.toolkit-desc > h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 .toolkit-desc > h4 {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.toolkit-desc > .last-desc {
+  margin-bottom: 25px;
+}
+
+.toolkit-desc > a {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
 }
 
 .title-with-line {
@@ -114,13 +148,13 @@ h1 {
 .news {
   background-color: #eaeaea;
   width: 100%;
-  height: 1170px;
+  height: 1000px;
   display: flex;
   align-items: center;
 }
 
 .news-container {
-  height: 580px;
+  height: 485px;
   width: 100%;
   background-color: #ffffff;
 }
@@ -131,8 +165,8 @@ h1 {
 }
 
 .news-item {
-  width: 385px;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   background-color: #d8d8d8;
   display: flex;
   justify-content: center;
@@ -154,7 +188,7 @@ h1 {
 
 .team {
   background-color: #ffffff;
-  height: 1330px;
+  height: 800px;
   width: 100%;
 }
 
