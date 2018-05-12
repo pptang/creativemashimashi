@@ -39,7 +39,9 @@ nav a:before {
 }
 
 nav a:hover:before,
-a:focus:before {
+nav a:focus:before,
+nav a.selected:before
+{
   visibility: visible;
   transform: scaleX(1);
 }
