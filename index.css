@@ -3,7 +3,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .header {
-  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 60px;
+  padding: 20px;
   background-color: #ffffff;
   box-sizing: border-box;
 }
@@ -15,6 +20,7 @@ body {
   color: #ffffff;
   justify-content: center;
   padding-bottom: 150px;
+  margin-top: 60px;
 }
 
 nav a {
@@ -31,7 +37,7 @@ nav a:before {
   width: 100%;
   height: 3px;
   left: 0;
-  bottom: 0;
+  bottom: -10px;
   background: #333333;
   visibility: hidden;
   transform: scaleX(0);
@@ -209,6 +215,7 @@ nav a.selected:before
 }
 
 .team {
+  padding-top: 100px;
   background-color: #ffffff;
   height: 800px;
   width: 100%;
@@ -231,6 +238,13 @@ nav a.selected:before
 .team-member:nth-child(2) {
   margin-left: 125px;
   margin-right: 125px;
+}
+
+.contact {
+  width: 70%;
+  background-color: #6a6a6a;
+  height: 250px;
+  margin: auto;
 }
 
 @media screen and (max-width: 720px) {
