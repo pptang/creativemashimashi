@@ -7,10 +7,10 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  height: 60px;
   padding: 20px;
   background-color: #ffffff;
   box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .top {
   display: flex;
@@ -19,8 +19,14 @@ body {
   box-sizing: border-box;
   color: #ffffff;
   justify-content: center;
+  align-items: center;
   padding-bottom: 150px;
   margin-top: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -46,8 +52,7 @@ nav a:before {
 
 nav a:hover:before,
 nav a:focus:before,
-nav a.selected:before
-{
+nav a.selected:before {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -56,6 +61,7 @@ nav a.selected:before
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+  align-items: center;
 }
 
 .main-title > h1 {
@@ -71,6 +77,26 @@ nav a.selected:before
   margin: 0;
   transform: rotate(-10deg);
   animation: infinite-showing 3s infinite;
+}
+
+.main-title > h3 {
+  margin-top: 40px;
+  font-weight: normal;
+}
+
+.main-title button {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  font-size: 12px;
+  color: #ffffff;
+  width: 125px;
+  height: 45px;
+  cursor: pointer;
+  outline: none;
+}
+
+.main-title button:hover {
+  opacity: 0.8;
 }
 
 @keyframes infinite-showing {
