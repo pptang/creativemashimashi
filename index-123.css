@@ -68,7 +68,8 @@ nav a.selected:before {
 .main-image {
   background-image: url('./main-logo.png');
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 100%;
   height: 500px;
   animation: breathing 4s ease-out infinite normal;
@@ -142,6 +143,11 @@ nav a.selected:before {
   justify-content: space-between;
 }
 
+.header > img {
+  width: 100px;
+  height: 61px;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -160,7 +166,7 @@ nav a.selected:before {
 .toolkit-content {
   width: 70%;
   height: 600px;
-  background-image: url('./papers.jpg');
+  background-image: url('./mashi2_image.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -273,6 +279,7 @@ nav a.selected:before {
   background-color: #ffffff;
   height: 800px;
   width: 100%;
+  margin-top: 150px;
 }
 
 .team-member-container {
@@ -287,6 +294,7 @@ nav a.selected:before {
   border-radius: 200px;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .team-member:nth-child(2) {
@@ -302,12 +310,18 @@ nav a.selected:before {
 }
 
 @media screen and (max-width: 720px) {
-  .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    font-size: 12px;
+  .main-title {
+    width: 80%;
   }
+  .header > img {
+    width: 80px;
+    height: 48px;
+  }
+
+  .main-image {
+    height: 250px;
+  }
+
   .main-title > h1 {
     letter-spacing: 2px;
     font-size: 72px;
@@ -354,5 +368,15 @@ nav a.selected:before {
 
   .team-member {
     margin-bottom: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header > img {
+    width: 60px;
+    height: 36px;
   }
 }
