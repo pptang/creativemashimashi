@@ -111,14 +111,16 @@ nav a.selected:before {
 .main-title > h3 {
   margin-top: 40px;
   font-weight: normal;
+  letter-spacing: 1.2px;
 }
 
 .main-title button {
   background-color: transparent;
   border: 2px solid #ffffff;
-  font-size: 12px;
+  font-size: 14px;
+  letter-spacing: 1.2px;
   color: #ffffff;
-  width: 125px;
+  width: 150px;
   height: 45px;
   cursor: pointer;
   outline: none;
@@ -176,7 +178,7 @@ nav a.selected:before {
 .toolkit-desc {
   width: 330px;
   background-color: #ffffff;
-  color: #000000;
+  color: #333333;
   position: absolute;
   bottom: -75px;
   left: 25px;
@@ -204,13 +206,37 @@ nav a.selected:before {
 
 .toolkit-desc > a {
   align-self: flex-end;
+  margin-right: 15px;
+  margin-bottom: 15px;
   text-decoration: none;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+.toolkit-desc > a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -10px;
+  background: #333333;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: 0.25s linear;
+}
+
+.toolkit-desc > a:hover:before,
+.toolkit-desc > a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 .title-with-line {
   text-align: center;
+  letter-spacing: 1.2px;
 }
 
 .title-with-line::before,
@@ -274,8 +300,12 @@ nav a.selected:before {
   bottom: -50px;
 }
 
+.buffer-section {
+  height: 200px;
+  background-color: #d8d8d8;
+}
+
 .team {
-  padding-top: 100px;
   background-color: #ffffff;
   height: 800px;
   width: 100%;
@@ -371,6 +401,10 @@ nav a.selected:before {
     width: 150px;
     height: 150px;
     border-radius: 150px;
+  }
+
+  .contact {
+    height: 125px;
   }
 }
 
