@@ -11,7 +11,13 @@ body {
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 200ms linear;
 }
+
+.blue-background {
+  background-color: #67bbef;
+}
+
 .top {
   display: flex;
   background-color: #67bbef;
