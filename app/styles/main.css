@@ -310,7 +310,7 @@ nav a.selected:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px;
+  height: 200px;
   background-color: #d8d8d8;
   color: #333333;
 }
@@ -356,7 +356,6 @@ nav a.selected:before {
 .team-member {
   width: 200px;
   height: 200px;
-  border-radius: 200px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -444,7 +443,6 @@ nav a.selected:before {
   .team-member {
     width: 150px;
     height: 150px;
-    border-radius: 150px;
   }
 
   .contact {
