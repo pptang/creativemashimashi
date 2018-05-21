@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +13,23 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="images/mashi2_image.jpg" />
     <title>増し増し</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/index-123.css">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
   </head>
   <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
     <header class="header">
       <a href="#top"><img src="images/logo_bk.png" alt="logo"></a>
       <nav>
@@ -94,7 +106,14 @@
       <a href="https://www.facebook.com/creativemashimashi/" target="_blank"><img src="images/fb.png" width="36" height="36" /></a>
       <a href="mailto:Creativemashimashi@gmail.com" target="_blank"><img src="images/mail.png" width="36" height="36" /></a>
     </section>
-    <script src="js/smooth-scroll.polyfills.min.js"></script>
-    <script src="js/main.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
   </body>
 </html>
