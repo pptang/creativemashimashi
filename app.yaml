@@ -1,22 +1,11 @@
 runtime: python27
-api_version: 2
+api_version: 1
 threadsafe: true
 
 handlers:
   - url: /
-    static_files: dist/index.html
-    upload: dist/index.html
+    static_files: www/index.html
+    upload: www/index.html
   - url: /(.*)
-    static_files: dist/\1
-    upload: dist/(.*)
-
-skip_files:
-  - .tmp/
-  - bower_components/
-  - node_modules/
-  - app/
-  - .gitignore
-  - bower.json
-  - gulpfile.js
-  - package.json
-  - yarn.lock
+    static_files: www/\1
+    upload: www/(.*)
