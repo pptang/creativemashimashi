@@ -16,13 +16,17 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="http://creativemashimashi.com/" />
     <meta property="og:image" content="http://creativemashimashi.com/images/mashi2_image.jpg" />
-    
+
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <style amp-custom>
+      @font-face {
+        font-family: Futura;
+        src: url(FUTURA.ttf);
+      }
       body {
         margin: 0;
-        font-family: 'Roboto', sans-serif;
+        font-family: Futura;
       }
       .header {
         position: fixed;
@@ -30,26 +34,31 @@
         left: 0;
         z-index: 1;
         padding: 20px;
-        background-color: #ffffff;
+        background-color: #ff4545;
         box-sizing: border-box;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 200ms linear;
+        color: #ffffff;
       }
 
-      .blue-background {
-        background-color: #67bbef;
+      .header a {
+        cursor: pointer;
       }
 
       .top {
         display: flex;
-        background-color: #67bbef;
+        background-color: #ff4545;
         width: 100%;
         box-sizing: border-box;
-        color: #ffffff;
         justify-content: center;
         align-items: center;
+        margin-bottom: 36px;
         padding-bottom: 150px;
-        margin-top: 60px;
+        color: #ffffff;
+      }
+
+      h1 {
+        font-size: 10rem;
+        line-height: 1;
+        margin-bottom: 63px;
       }
 
       nav {
@@ -60,7 +69,7 @@
       nav a {
         position: relative;
         text-decoration: none;
-        color: #333333;
+        color: #ffffff;
         margin-left: 15px;
         margin-right: 15px;
       }
@@ -72,7 +81,7 @@
         height: 3px;
         left: 0;
         bottom: -10px;
-        background: #333333;
+        background: #ffffff;
         visibility: hidden;
         transform: scaleX(0);
         transition: 0.25s linear;
@@ -88,17 +97,10 @@
       .main-title {
         display: flex;
         flex-direction: column;
-        margin-top: 100px;
         align-items: center;
         width: 60%;
       }
 
-      .main-title > h1 {
-        font-family: 'Lobster', cursive;
-        letter-spacing: 10px;
-        font-size: 144px;
-        margin: 0;
-      }
 
       .main-title > h2 {
         font-size: 72px;
@@ -108,26 +110,26 @@
         animation: infinite-showing 3s infinite;
       }
 
-      .main-title > h3 {
-        margin-top: 40px;
-        font-weight: normal;
-        letter-spacing: 1.2px;
+      .main-title > p {
+        font-size: 20px;
+        margin-bottom: 40px;
       }
 
       .main-title button {
-        background-color: transparent;
-        border: 2px solid #ffffff;
-        font-size: 14px;
-        letter-spacing: 1.2px;
-        color: #ffffff;
-        width: 150px;
-        height: 45px;
+        width: 273px;
+        height: 50px;
+        border-radius: 25px;
+        background-image: linear-gradient(to bottom, #0a1f3c, #2e2e2e);
         cursor: pointer;
         outline: none;
+        color: #ffffff;
+        border: 0;
+        font-size: 20px;
       }
 
       .main-title button:hover {
-        opacity: 0.8;
+        background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+        color: #2e2e2e;
       }
 
       @keyframes infinite-showing {
@@ -217,28 +219,13 @@
         background-color: #333333;
       }
 
-      .title-with-line {
+      .section-title {
         text-align: center;
-        letter-spacing: 1.2px;
+        font-size: 36px;
       }
 
-      .title-with-line::before,
-      .title-with-line::after {
-        background-color: #333333;
-        content: '';
-        display: inline-block;
-        height: 1px;
-        position: relative;
-        vertical-align: middle;
-        width: 30%;
-      }
-
-      .title-with-line::before {
-        right: 10px;
-      }
-
-      .title-with-line::after {
-        left: 10px;
+      .section-sub-title {
+        text-align: center;
       }
 
       .news {
@@ -296,23 +283,37 @@
         margin-top: 150px;
       }
 
+      .believe-section {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 80px auto;
+        width: 70%;
+      }
+
+      .believe-section-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+        padding: 15px;
+      }
+
       .team {
         background-color: #ffffff;
-        width: 100%;
         margin-top: 50px;
-        margin-bottom: 150px;
+        width: 100%;
       }
 
       .team-member-container {
         display: flex;
         justify-content: center;
-        margin-top: 50px;
       }
 
       .team-member-container > article {
         display: flex;
         flex-direction: column;
         margin: 35px;
+        background-color: #ffbd1b;
       }
 
       .team-member-container > article > h3 {
@@ -323,18 +324,8 @@
         font-size: 14px;
       }
 
-      .team-member-container > article > p {
-        display: flex;
-        justify-content: center;
-        letter-spacing: 1.2px;
-        line-height: 1.5;
-        width: 200px;
-        color: #777777;
-        font-size: 12px;
-      }
-
       .team-member {
-        width: 200px;
+        width: 100%;
         height: 200px;
         background-position: center;
         background-size: cover;
@@ -344,6 +335,20 @@
       .team-member:nth-child(2) {
         margin-left: 125px;
         margin-right: 125px;
+      }
+
+      .team-member-detail {
+        padding: 10px;
+      }
+
+      .team-member-detail > p {
+        color: #777777;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 1.2px;
+        line-height: 1.5;
+        width: 200px;
+        font-size: 12px;
       }
 
       .contact {
@@ -360,17 +365,16 @@
       }
 
       @media screen and (max-width: 720px) {
+        h1 {
+          margin-top: 120px;
+          font-size: 5rem;
+        }
         .main-title {
           width: 80%;
         }
         .header > img {
           width: 80px;
           height: 48px;
-        }
-
-        .main-title > h1 {
-          letter-spacing: 2px;
-          font-size: 72px;
         }
 
         .main-title > h2 {
@@ -416,12 +420,8 @@
           align-items: center;
         }
 
-        .team-member-container > article > p {
-          width: 150px;
-        }
-
         .team-member {
-          width: 150px;
+          width: 100%;
           height: 150px;
         }
 
@@ -430,6 +430,11 @@
         }
         .team-member-container article {
           margin-bottom: 50px;
+        }
+
+        .believe-section {
+          flex-direction: column;
+          align-items: center;
         }
       }
 
@@ -455,7 +460,7 @@
         }
       </script>
     </amp-state>
-      
+
     <amp-animation layout="nodisplay" trigger="visibility">
       <script type="application/json">
       {
@@ -471,22 +476,24 @@
     </amp-animation>
 
     <header class="header">
-      <a href="#top"><amp-img src="images/logo_bk.png" alt="logo" width="100" height="61"></amp-img></a>
+      <a on="tap:top.scrollTo(duration=600)"><amp-img src="images/logo_wt.png" alt="logo" width="100" height="61"></amp-img></a>
       <nav>
-        <a href="#" class="selected" [class]="section.currentSection == 'about' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'about'}}), about.scrollTo(duration=600)">About</a>
+        <a class="selected" [class]="section.currentSection == 'mission' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'mission'}}), mission.scrollTo(duration=600)">About</a>
         <!-- <a href="#news">News</a> -->
-        <a href="#"[class]="section.currentSection == 'teams' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'teams'}}), teams.scrollTo(duration=600)">Team</a>
-        <a href="#" [class]="section.currentSection == 'contact' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'contact'}}), contact.scrollTo(duration=600)">Contact</a>
+        <a [class]="section.currentSection == 'teams' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'teams'}}), teams.scrollTo(duration=600)">Team</a>
+        <a [class]="section.currentSection == 'contact' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'contact'}}), contact.scrollTo(duration=600)">Contact</a>
       </nav>
     </header>
     <section id="top" class="top">
       <div class="main-title">
-        <amp-img id="hero-image" src="images/main-logo.png"  alt="hero image" width="920" height="560" sizes="(min-width: 320px) 620px, 100vw"></amp-img>
-        <h3>Unlock your creative potential</h3>
-        <button on="tap:contact.scrollTo(duration=600)">GET IN TOUCH</button>
+        <h1>MASHI<br/>MASHI</h1>
+        <!-- <amp-img id="hero-image" src="images/main-logo.png"  alt="hero image" width="920" height="560" sizes="(min-width: 320px) 620px, 100vw"></amp-img> -->
+        <p>We help people and organizations unlock their creativity.</p>
+        <button on="tap:contact.scrollTo(duration=600)">Say Hi! 👋</button>
       </div>
     </section>
-    <section class="toolkit">
+
+    <!-- <section class="toolkit">
       <div class="toolkit-content">
         <div id="about" class="toolkit-desc">
           <h2>AI Toolkit</h2>
@@ -496,23 +503,62 @@
           <a href="https://drive.google.com/file/d/1lN76Gv0P7OIFogHF12_rUr2W0f1hZbfh/view?usp=sharing" target="_blank">Download</a>
         </div>
       </div>
+    </section> -->
+    <section id="mission" class="believe-section">
+      <div class="believe-section-description">
+        <h2>We believe</h2>
+        <p>Every human being has unlimited creativity. To unlock creative potential, we need to constant training and practicing through design activity and process. </p>
+      </div>
+      <amp-img src="images/mashi2_image.jpg" alt="believe image" layout="responsive"  sizes="50vw" width="1.52"
+      height="1"></amp-img>
     </section>
-    <section class="about-us-section">
+    <section class="believe-section">
+      <amp-img src="images/mashi2_image.jpg" alt="believe image" layout="responsive" sizes="50vw"></amp-img>
+      <div class="believe-section-description">
+        <h2>We believe</h2>
+        <p>Every human being has unlimited creativity. To unlock creative potential, we need to constant training and practicing through design activity and process. </p>
+      </div>
+    </section>
+    <section id="workshop" class="team">
+      <h2 class="section-title">Workshops</h2>
+      <div class="team-member-container">
+        <article>
+          <div class="team-member" style="background-image:url('images/mashi2_image.jpg')"></div>
+          <div class="team-member-detail">
+            <h3>TBD</h3>
+            <span>First workshop</span>
+            <p>I believe everyone has creative potential. Let’s unlock it with design!</p>
+          </div>
+        </article>
+        <article>
+          <div class="team-member" style="background-image:url('images/mashi2_image.jpg')"></div>
+          <div class="team-member-detail">
+            <h3>TBD</h3>
+            <span>Second workshop</span>
+            <p>I believe everyone has creative potential. Let’s unlock it with design!</p>
+          </div>
+        </article>
+      </div>
     </section>
     <section id="teams" class="team">
-      <h2 class="title-with-line">TEAMS</h2>
+      <h2 class="section-title">Team</h2>
+      <p class="section-sub-title">To make the world running with creative solutions that truly enhance people’s happiness.</p>
       <div class="team-member-container">
         <article>
           <div class="team-member" style="background-image:url('images/jasper.png')"></div>
-          <h3>Jasper Wu</h3>
-          <span>Designer</span>
-          <p>I believe everyone has creative potential. Let’s unlock it with design!</p>
+          <div class="team-member-detail">
+            <h3>Jasper Wu</h3>
+            <span>Designer</span>
+            <p>I believe everyone has creative potential. Let’s unlock it with design!</p>
+          </div>
         </article>
         <article>
           <div class="team-member" style="background-image:url('images/bible.png')"></div>
-          <h3>Paipo Tang</h3>
-          <span>Engineer</span>
-          <p>More and more abstraction layers of engineering strengthen the importance of design!</p>
+          <div class="team-member-detail">
+            <h3>Paipo Tang</h3>
+            <span>Engineer</span>
+            <p>More and more abstraction layers of engineering strengthen the importance of design!</p>
+          </div>
         </article>
       </div>
     </section>
