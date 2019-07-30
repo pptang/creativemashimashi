@@ -19,6 +19,7 @@
 
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
     <style amp-custom>
       @font-face {
         font-family: Futura;
@@ -29,14 +30,8 @@
         font-family: Futura;
       }
       .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
         padding: 20px;
-        background-color: #ff4545;
         box-sizing: border-box;
-        color: #ffffff;
       }
 
       .header a {
@@ -45,8 +40,9 @@
 
       .top {
         display: flex;
-        background-color: #ff4545;
+        background-color: #55E0FF;
         width: 100%;
+        height: 100vh;
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
@@ -114,38 +110,66 @@
         font-size: 20px;
         margin-bottom: 40px;
       }
-
-      .main-title button {
-        width: 273px;
+      .call-to-action {
+      }
+      .call-to-action button {
+        width: 220px;
         height: 50px;
-        border-radius: 25px;
-        background-image: linear-gradient(to bottom, #0a1f3c, #2e2e2e);
+        border-radius: 100px;
         cursor: pointer;
         outline: none;
-        color: #ffffff;
         border: 0;
         font-size: 20px;
+        font-weight: bold;
       }
 
-      .main-title button:hover {
-        background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-        color: #2e2e2e;
+      .call-to-action button:hover {
+        opacity: 0.8;
       }
 
-      @keyframes infinite-showing {
+      .about-us-btn {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .contact-us-btn {
+        background-color: #ff4242;
+        color: #ffffff;
+        margin-left: 50px;
+      }
+
+      .introduction {
+        height: 100vh;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      .intro-description {
+        display: flex;
+      }
+
+      .intro-text {
+        flex: 1;
+        padding-right: 30px;
+      }
+      .kits-img {
+        flex: 1;
+      }
+
+      /* @keyframes infinite-showing {
         from {
           opacity: 0;
         }
         to {
           opacity: 1;
         }
-      }
+      } */
 
-      .header {
+      /* .header {
         width: 100%;
         display: flex;
         justify-content: space-between;
-      }
+      } */
 
       .logo {
         display: flex;
@@ -154,7 +178,7 @@
         color: #333333;
       }
 
-      .toolkit {
+      /* .toolkit {
         background-color: #ffffff;
         width: 100%;
         height: 500px;
@@ -212,7 +236,7 @@
         position: relative;
         border: 2px solid #333333;
         padding: 5px;
-      }
+      } */
 
       .toolkit-desc > a:hover {
         color: #ffffff;
@@ -228,7 +252,7 @@
         text-align: center;
       }
 
-      .news {
+      /* .news {
         background-color: #eaeaea;
         width: 100%;
         padding-top: 300px;
@@ -268,7 +292,7 @@
         background-color: #ffffff;
         position: absolute;
         bottom: -50px;
-      }
+      } */
 
       .about-us-section {
         display: flex;
@@ -283,11 +307,12 @@
         margin-top: 150px;
       }
 
-      .believe-section {
+      /* .believe-section {
         display: flex;
         justify-content: center;
         margin: 0 auto 80px auto;
         width: 70%;
+        z-index: 2;
       }
 
       .believe-section-description {
@@ -349,7 +374,7 @@
         line-height: 1.5;
         width: 200px;
         font-size: 12px;
-      }
+      } */
 
       .contact {
         display: flex;
@@ -372,16 +397,16 @@
         .main-title {
           width: 80%;
         }
-        .header > img {
+        /* .header > img {
           width: 80px;
           height: 48px;
-        }
+        } */
 
         .main-title > h2 {
           font-size: 36px;
         }
 
-        .toolkit {
+        /* .toolkit {
           height: 300px;
         }
 
@@ -397,12 +422,12 @@
         }
         .toolkit-desc > h4 {
           margin-bottom: 5px;
-        }
+        } */
 
         .about-us-section > h2 {
           margin-top: 100px;
         }
-        .news {
+        /* .news {
           padding-top: 150px;
           padding-bottom: 150px;
         }
@@ -423,27 +448,27 @@
         .team-member {
           width: 100%;
           height: 150px;
-        }
+        } */
 
         .contact {
           height: 125px;
         }
-        .team-member-container article {
+        /* .team-member-container article {
           margin-bottom: 50px;
         }
 
         .believe-section {
           flex-direction: column;
           align-items: center;
-        }
+        } */
       }
 
-      @media screen and (max-width: 540px) {
+      /* @media screen and (max-width: 540px) {
         .header > img {
           width: 60px;
           height: 36px;
         }
-      }
+      } */
     </style>
     <style amp-boilerplate>
       body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
@@ -475,24 +500,40 @@
       </script>
     </amp-animation>
 
-    <header class="header">
+    <!-- <header class="header">
       <a on="tap:top.scrollTo(duration=600)"><amp-img src="images/logo_wt.png" alt="logo" width="100" height="61"></amp-img></a>
       <nav>
         <a class="selected" [class]="section.currentSection == 'mission' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'mission'}}), mission.scrollTo(duration=600)">About</a>
-        <!-- <a href="#news">News</a> -->
         <a [class]="section.currentSection == 'teams' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'teams'}}), teams.scrollTo(duration=600)">Team</a>
         <a [class]="section.currentSection == 'contact' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'contact'}}), contact.scrollTo(duration=600)">Contact</a>
       </nav>
-    </header>
+    </header> -->
+
     <section id="top" class="top">
       <div class="main-title">
-        <h1>MASHI<br/>MASHI</h1>
-        <!-- <amp-img id="hero-image" src="images/main-logo.png"  alt="hero image" width="920" height="560" sizes="(min-width: 320px) 620px, 100vw"></amp-img> -->
-        <p>We help people and organizations unlock their creativity.</p>
-        <button on="tap:contact.scrollTo(duration=600)">Say Hi! 👋</button>
+        <!-- <h1>MASHI<br/>MASHI</h1> -->
+        <amp-img id="hero-image" src="images/logo_wt.png"  alt="hero image" width="920" height="560" sizes="(min-width: 320px) 620px, 100vw"></amp-img>
+        <p>Unlock your creativity potential!</p>
+        <div class="call-to-action">
+          <button class="about-us-btn" on="tap:contact.scrollTo(duration=600)">About Us</button>
+          <button class="contact-us-btn" on="tap:contact.scrollTo(duration=600)">Contact Us 🙌  </button>
+        </div>
       </div>
     </section>
-
+    <section class="introduction" amp-fx="fade-in">
+      <header class="header">
+        <a on="tap:top.scrollTo(duration=600)"><amp-img src="images/logo_bk.png" alt="logo" width="100" height="61"></amp-img></a>
+      </header>
+      <div class="intro-description">
+        <div class="intro-text">
+            <p class="intro-text">👋 Hello, We are MashiMashi.</p>
+            <p class="intro-text>">Our mission is unlocking people’s creative potential through design.</p>
+            <p class="intro-text>">We believe everyone has unlimited creativity; however, the culture and social norm blocks it.</p>
+            <p class="intro-text>">We provide different kinds of human-centered training and workshops and toolkits for people and organisation to unlock their creativity potential. ❤️</p>
+        </div>
+        <amp-img id="kits-img" src="images/mashi2_image.jpg"  alt="kits image" width="538" height="469" sizes="(min-width: 320px) 420px, 100vw"></amp-img>
+      </div>
+    </section>
     <!-- <section class="toolkit">
       <div class="toolkit-content">
         <div id="about" class="toolkit-desc">
@@ -504,7 +545,7 @@
         </div>
       </div>
     </section> -->
-    <section id="mission" class="believe-section">
+    <!-- <section id="mission" class="believe-section">
       <div class="believe-section-description">
         <h2>We believe</h2>
         <p>Every human being has unlimited creativity. To unlock creative potential, we need to constant training and practicing through design activity and process. </p>
@@ -561,7 +602,7 @@
           </div>
         </article>
       </div>
-    </section>
+    </section> -->
     <section id="contact" class="contact">
       <a href="https://www.facebook.com/creativemashimashi/" target="_blank"><amp-img src="images/fb.png" width="36" height="36"></amp-img></a>
       <a href="mailto:Creativemashimashi@gmail.com" target="_blank"><amp-img src="images/mail.png" width="36" height="36" ></amp-img></a>
