@@ -1,36 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ⚡ lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="canonical" href="/index.html">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="canonical" href="/index.html" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Roboto"
+      rel="stylesheet"
+    />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>増し増し</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <meta name="description" content="">
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Creative 増し増し" />
-    <meta name="og:description" content="">
+    <meta name="og:description" content="" />
     <meta property="og:site_name" content="CreativeMashiMashi" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="http://creativemashimashi.com/" />
-    <meta property="og:image" content="http://creativemashimashi.com/images/mashi2_image.jpg" />
+    <meta
+      property="og:image"
+      content="http://creativemashimashi.com/images/mashi2_image.jpg"
+    />
 
-    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+    <script
+      async
+      custom-element="amp-animation"
+      src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-fx-collection"
+      src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-position-observer"
+      src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"
+    ></script>
     <style amp-custom>
       @font-face {
         font-family: Futura;
         src: url(FUTURA.ttf);
       }
       body {
+        background-color: #ffffff;
         margin: 0;
         font-family: Futura;
       }
       .header {
-        padding: 20px;
         box-sizing: border-box;
       }
 
@@ -39,15 +65,19 @@
       }
 
       .top {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
         display: flex;
-        background-color: #55E0FF;
+        background-color: #55e0ff;
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
         margin-bottom: 36px;
-        padding-bottom: 150px;
+        /* padding-bottom: 150px; */
         color: #ffffff;
       }
 
@@ -97,7 +127,6 @@
         width: 60%;
       }
 
-
       .main-title > h2 {
         font-size: 72px;
         align-self: flex-end;
@@ -139,6 +168,10 @@
       }
 
       .introduction {
+        position: relative;
+        background-color: #ffffff;
+        z-index: 2;
+        margin-top: 100vh;
         height: 100vh;
         padding-left: 100px;
         padding-right: 100px;
@@ -377,9 +410,12 @@
       } */
 
       .contact {
+        position: relative;
+        background-color: #ffffff;
+        z-index: 2;
         display: flex;
         justify-content: center;
-        width: 150px;
+        width: 100%;
         height: 100px;
         margin-left: auto;
         margin-right: auto;
@@ -471,10 +507,62 @@
       } */
     </style>
     <style amp-boilerplate>
-      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
     </style>
     <noscript>
-      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+      <style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style>
     </noscript>
   </head>
   <body>
@@ -488,15 +576,15 @@
 
     <amp-animation layout="nodisplay" trigger="visibility">
       <script type="application/json">
-      {
-        "selector": "#hero-image",
-        "duration": "4s",
-        "easing": "ease-out",
-        "iterations": "infinite",
-        "keyframes": {
-          "transform": ["scale(0.9)", "scale(1)", "scale(0.9)", "scale(0.9)"]
+        {
+          "selector": "#hero-image",
+          "duration": "4s",
+          "easing": "ease-out",
+          "iterations": "infinite",
+          "keyframes": {
+            "transform": ["scale(0.9)", "scale(1)", "scale(0.9)", "scale(0.9)"]
+          }
         }
-      }
       </script>
     </amp-animation>
 
@@ -508,30 +596,131 @@
         <a [class]="section.currentSection == 'contact' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'contact'}}), contact.scrollTo(duration=600)">Contact</a>
       </nav>
     </header> -->
-
+    <!-- <amp-animation id="fadeOutTransition" layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": "1",
+          "fill": "both",
+          "direction": "reverse",
+          "animations": [{
+            "selector": ["#top", "#introduction"],
+            "keyframes": [{
+              "opacity": "0.3",
+              "offset": 0
+            },
+            {
+              "opacity": "1",
+              "offset": 0.4
+            },
+            {
+              "opacity": "1",
+              "offset": 0.6
+            },
+            {
+              "opacity": "0.3",
+              "offset": 1
+            }
+          ]
+          }]
+        }
+      </script>
+    </amp-animation> -->
+    <amp-animation id="fadeTransition" layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": "1",
+          "fill": "none",
+          "direction": "reverse",
+          "animations": [{
+            "selector": "#top",
+            "keyframes": [{
+                "opacity": "1",
+                "offset": 0
+              },
+              {
+                "opacity": "0.5",
+                "offset": 0.3
+              },
+              {
+                "opacity": "0.5",
+                "offset": 0.7
+              },
+              {
+                "opacity": "1",
+                "offset": 1
+              }
+            ]
+          }]
+        }
+      </script>
+    </amp-animation>
     <section id="top" class="top">
       <div class="main-title">
         <!-- <h1>MASHI<br/>MASHI</h1> -->
-        <amp-img id="hero-image" src="images/logo_wt.png"  alt="hero image" width="920" height="560" sizes="(min-width: 320px) 620px, 100vw"></amp-img>
+        <amp-img
+          id="hero-image"
+          src="images/logo_wt.png"
+          alt="hero image"
+          width="920"
+          height="560"
+          sizes="(min-width: 320px) 620px, 100vw"
+        ></amp-img>
         <p>Unlock your creativity potential!</p>
         <div class="call-to-action">
-          <button class="about-us-btn" on="tap:contact.scrollTo(duration=600)">About Us</button>
-          <button class="contact-us-btn" on="tap:contact.scrollTo(duration=600)">Contact Us 🙌  </button>
+          <button class="about-us-btn" on="tap:contact.scrollTo(duration=600)">
+            About Us
+          </button>
+          <button
+            class="contact-us-btn"
+            on="tap:contact.scrollTo(duration=600)"
+          >
+            Contact Us 🙌
+          </button>
         </div>
       </div>
     </section>
-    <section class="introduction" amp-fx="fade-in">
+    <!-- <section class="introduction" amp-fx="fade-in-scroll" data-repeat> -->
+    <section id="introduction" class="introduction">
+      <amp-position-observer
+        on="scroll:fadeTransition.seekTo(percent=event.percent)"
+        intersection-ratios="0"
+        layout="nodisplay"
+      >
+      </amp-position-observer>
       <header class="header">
-        <a on="tap:top.scrollTo(duration=600)"><amp-img src="images/logo_bk.png" alt="logo" width="100" height="61"></amp-img></a>
+        <a on="tap:top.scrollTo(duration=600)"
+          ><amp-img
+            src="images/logo_bk.png"
+            alt="logo"
+            width="100"
+            height="61"
+          ></amp-img
+        ></a>
       </header>
       <div class="intro-description">
         <div class="intro-text">
-            <p class="intro-text">👋 Hello, We are MashiMashi.</p>
-            <p class="intro-text>">Our mission is unlocking people’s creative potential through design.</p>
-            <p class="intro-text>">We believe everyone has unlimited creativity; however, the culture and social norm blocks it.</p>
-            <p class="intro-text>">We provide different kinds of human-centered training and workshops and toolkits for people and organisation to unlock their creativity potential. ❤️</p>
+          <p class="intro-text">👋 Hello, We are MashiMashi.</p>
+          <p class="intro-text>">
+            Our mission is unlocking people’s creative potential through design.
+          </p>
+          <p class="intro-text>">
+            We believe everyone has unlimited creativity; however, the culture
+            and social norm blocks it.
+          </p>
+          <p class="intro-text>">
+            We provide different kinds of human-centered training and workshops
+            and toolkits for people and organisation to unlock their creativity
+            potential. ❤️
+          </p>
         </div>
-        <amp-img id="kits-img" src="images/mashi2_image.jpg"  alt="kits image" width="538" height="469" sizes="(min-width: 320px) 420px, 100vw"></amp-img>
+        <amp-img
+          id="kits-img"
+          src="images/mashi2_image.jpg"
+          alt="kits image"
+          width="538"
+          height="469"
+          sizes="(min-width: 320px) 420px, 100vw"
+        ></amp-img>
       </div>
     </section>
     <!-- <section class="toolkit">
@@ -604,9 +793,12 @@
       </div>
     </section> -->
     <section id="contact" class="contact">
-      <a href="https://www.facebook.com/creativemashimashi/" target="_blank"><amp-img src="images/fb.png" width="36" height="36"></amp-img></a>
-      <a href="mailto:Creativemashimashi@gmail.com" target="_blank"><amp-img src="images/mail.png" width="36" height="36" ></amp-img></a>
+      <a href="https://www.facebook.com/creativemashimashi/" target="_blank"
+        ><amp-img src="images/fb.png" width="36" height="36"></amp-img
+      ></a>
+      <a href="mailto:Creativemashimashi@gmail.com" target="_blank"
+        ><amp-img src="images/mail.png" width="36" height="36"></amp-img
+      ></a>
     </section>
-
   </body>
 </html>
