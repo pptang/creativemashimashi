@@ -57,7 +57,10 @@
         font-family: Futura;
       }
       .header {
+        display: flex;
+        justify-content: space-between;
         box-sizing: border-box;
+        margin-bottom: 100px;
       }
 
       .header a {
@@ -137,11 +140,13 @@
 
       .main-title > p {
         font-size: 20px;
-        margin-bottom: 40px;
+        margin-top: 0;
+        margin-bottom: 50px;
       }
       .call-to-action {
+        align-self: flex-end;
       }
-      .call-to-action button {
+      button {
         width: 220px;
         height: 50px;
         border-radius: 100px;
@@ -164,7 +169,7 @@
       .contact-us-btn {
         background-color: #ff4242;
         color: #ffffff;
-        margin-left: 50px;
+        margin-left: 10px;
       }
 
       .introduction {
@@ -173,12 +178,14 @@
         z-index: 2;
         margin-top: 100vh;
         height: 100vh;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 75px 100px 25px;
+        box-sizing: border-box;
+        background-color: #ffffff;
       }
 
       .intro-description {
         display: flex;
+        margin-bottom: 100px;
       }
 
       .intro-text {
@@ -413,16 +420,28 @@
         position: relative;
         background-color: #ffffff;
         z-index: 2;
-        display: flex;
-        justify-content: center;
         width: 100%;
         height: 100px;
         margin-left: auto;
         margin-right: auto;
       }
-
-      .contact a {
+      .social-network {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      .social-network a {
         margin-right: 20px;
+      }
+
+      .copyright {
+        height: 23px;
+
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+
+        color: #090000;
       }
 
       @media screen and (max-width: 720px) {
@@ -505,6 +524,16 @@
           height: 36px;
         }
       } */
+      .contact-form {
+        position: relative;
+        z-index: 2;
+        background-color: #ffffff;
+        box-sizing: border-box;
+        padding: 54px;
+      }
+      .contact-box {
+        border: 4px solid #000000;
+      }
     </style>
     <style amp-boilerplate>
       body {
@@ -581,8 +610,9 @@
           "duration": "4s",
           "easing": "ease-out",
           "iterations": "infinite",
+          "fill": "both",
           "keyframes": {
-            "transform": ["scale(0.9)", "scale(1)", "scale(0.9)", "scale(0.9)"]
+            "transform": ["scale(0.9)", "scale(1)", "scale(0.9)"]
           }
         }
       </script>
@@ -696,6 +726,9 @@
             height="61"
           ></amp-img
         ></a>
+        <button class="contact-us-btn" on="tap:contact.scrollTo(duration=600)">
+          Contact Us 🙌
+        </button>
       </header>
       <div class="intro-description">
         <div class="intro-text">
@@ -722,7 +755,40 @@
           sizes="(min-width: 320px) 420px, 100vw"
         ></amp-img>
       </div>
+      <div id="contact" class="contact">
+        <div class="social-network">
+          <a href="https://www.facebook.com/creativemashimashi/" target="_blank"
+            ><amp-img src="images/fb.png" width="36" height="36"></amp-img
+          ></a>
+          <a href="mailto:Creativemashimashi@gmail.com" target="_blank"
+            ><amp-img src="images/mail.png" width="36" height="36"></amp-img
+          ></a>
+        </div>
+        <div class="copyright">©2019 Mashimahsi, Inc</div>
+      </div>
     </section>
+    <!-- <section class="contact-form">
+      <div class="contact-box">
+        <div></div>
+        <a on="tap:top.scrollTo(duration=600)"
+          ><amp-img
+            src="images/logo_bk.png"
+            alt="logo"
+            width="100"
+            height="61"
+          ></amp-img
+        ></a>
+        <amp-img
+          id="kits-img"
+          src="images/mashi2_image.jpg"
+          alt="kits image"
+          width="538"
+          height="469"
+          sizes="(min-width: 320px) 420px, 100vw"
+        ></amp-img>
+      </div>
+      <div class="copyright">©2019 Mashimahsi, Inc</div>
+    </section> -->
     <!-- <section class="toolkit">
       <div class="toolkit-content">
         <div id="about" class="toolkit-desc">
@@ -792,13 +858,5 @@
         </article>
       </div>
     </section> -->
-    <section id="contact" class="contact">
-      <a href="https://www.facebook.com/creativemashimashi/" target="_blank"
-        ><amp-img src="images/fb.png" width="36" height="36"></amp-img
-      ></a>
-      <a href="mailto:Creativemashimashi@gmail.com" target="_blank"
-        ><amp-img src="images/mail.png" width="36" height="36"></amp-img
-      ></a>
-    </section>
   </body>
 </html>
