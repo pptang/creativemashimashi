@@ -54,8 +54,6 @@
       body {
         background-color: #ffffff;
         margin: 0;
-        /* AMP added another important to make scrollbar visible, which is annoying 🙄 */
-        overflow-x: hidden !important;
       }
 
       .header {
@@ -468,8 +466,8 @@
       </style>
     </noscript>
   </head>
-
-  <body>
+  <!-- AMP added another important to make scrollbar visible, which is annoying 🙄 -->
+  <body style="overflow-x: hidden !important;">
     <amp-state id="section">
       <script type="application/json">
         {
