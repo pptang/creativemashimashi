@@ -1,42 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ⚡ lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="canonical" href="/index.html">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="canonical" href="/index.html" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Roboto"
+      rel="stylesheet"
+    />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>増し増し</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <meta name="description" content="">
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Creative 増し増し" />
-    <meta name="og:description" content="">
+    <meta name="og:description" content="" />
     <meta property="og:site_name" content="CreativeMashiMashi" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="http://creativemashimashi.com/" />
-    <meta property="og:image" content="http://creativemashimashi.com/images/mashi2_image.jpg" />
+    <meta
+      property="og:image"
+      content="http://creativemashimashi.com/images/mashi2_image.jpg"
+    />
 
-    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script
+      async
+      custom-element="amp-animation"
+      src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-fx-collection"
+      src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-position-observer"
+      src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"
+    ></script>
     <style amp-custom>
-      @font-face {
-        font-family: Futura;
-        src: url(FUTURA.ttf);
-      }
       body {
+        background-color: #ffffff;
         margin: 0;
-        font-family: Futura;
+        font-family: Arial Black;
       }
+
       .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        padding: 20px;
-        background-color: #ff4545;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         box-sizing: border-box;
-        color: #ffffff;
+        margin-bottom: 100px;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .header a {
@@ -44,14 +69,18 @@
       }
 
       .top {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
         display: flex;
-        background-color: #ff4545;
+        background-color: #55e0ff;
         width: 100%;
+        height: 100vh;
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
         margin-bottom: 36px;
-        padding-bottom: 150px;
         color: #ffffff;
       }
 
@@ -98,9 +127,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 60%;
+        max-width: 1035px;
+        width: 70%;
       }
-
 
       .main-title > h2 {
         font-size: 72px;
@@ -110,41 +139,123 @@
         animation: infinite-showing 3s infinite;
       }
 
-      .main-title > p {
-        font-size: 20px;
-        margin-bottom: 40px;
+      .main-subtitle {
+        font-size: 32px;
+        margin-top: 0;
+        margin-bottom: 77px;
       }
 
-      .main-title button {
-        width: 273px;
+      .call-to-action {
+        align-self: flex-end;
+      }
+      button {
+        width: 220px;
         height: 50px;
-        border-radius: 25px;
-        background-image: linear-gradient(to bottom, #0a1f3c, #2e2e2e);
+        border-radius: 100px;
         cursor: pointer;
         outline: none;
-        color: #ffffff;
         border: 0;
         font-size: 20px;
+        font-weight: bold;
       }
 
-      .main-title button:hover {
-        background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-        color: #2e2e2e;
+      .call-to-action button:hover {
+        opacity: 0.8;
       }
 
-      @keyframes infinite-showing {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+      .about-us-btn {
+        background-color: #ffffff;
+        color: #663838;
       }
 
-      .header {
-        width: 100%;
+      .contact-us-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 50px;
+        border-radius: 100px;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: 23px;
+        background-color: #ff4242;
+        color: #ffffff;
+      }
+
+      .contact-us-btn:hover {
+        opacity: 0.8;
+      }
+
+      .introduction {
+        position: relative;
+        background-color: #ffffff;
+        z-index: 2;
+        margin-top: 100vh;
+        padding: 75px 100px 25px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+      }
+
+      .intro-description {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 100px;
+        max-width: 1440px;
+        margin: 0 auto 100px auto;
+      }
+
+      .intro-text-container {
+        max-width: 484px;
+      }
+
+      .intro-text {
+        flex: 1;
+        padding-right: 30px;
+      }
+
+      .kits-container {
+        margin-left: 50px;
+      }
+
+      .kits-img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f8f8f8;
+        padding: 25px;
+        margin-bottom: 20px;
+      }
+
+      .kits-img {
+        flex: 1;
+      }
+
+      .kits-description {
+        font-size: 14px;
+        color: #090000;
+        max-width: 633px;
+        margin: 20px 0 0 0;
+      }
+
+      .downloadBtn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        float: right;
+        width: 220px;
+        height: 50px;
+        background: #000000;
+        border-radius: 100px;
+        color: #ffffff;
+      }
+
+      .downloadBtn:hover {
+        opacity: 0.8;
       }
 
       .logo {
@@ -152,66 +263,6 @@
         justify-content: center;
         align-items: center;
         color: #333333;
-      }
-
-      .toolkit {
-        background-color: #ffffff;
-        width: 100%;
-        height: 500px;
-        display: flex;
-        justify-content: center;
-      }
-
-      .toolkit-content {
-        width: 70%;
-        height: 600px;
-        background-image: url('./images/mashi2_image.jpg');
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        top: -50px;
-      }
-
-      .toolkit-desc {
-        width: 330px;
-        background-color: #ffffff;
-        color: #333333;
-        position: absolute;
-        bottom: -75px;
-        left: 25px;
-        padding: 10px 15px;
-        padding-top: 10px;
-        padding-left: 15px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .toolkit-desc > h2 {
-        margin-top: 0;
-        margin-bottom: 20px;
-      }
-
-      .toolkit-desc > h4 {
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-
-      .toolkit-desc > .last-desc {
-        margin-bottom: 25px;
-      }
-
-      .toolkit-desc > a {
-        align-self: flex-end;
-        margin-right: 15px;
-        margin-bottom: 15px;
-        text-decoration: none;
-        color: #333333;
-        font-weight: bold;
-        font-size: 16px;
-        position: relative;
-        border: 2px solid #333333;
-        padding: 5px;
       }
 
       .toolkit-desc > a:hover {
@@ -228,48 +279,6 @@
         text-align: center;
       }
 
-      .news {
-        background-color: #eaeaea;
-        width: 100%;
-        padding-top: 300px;
-        padding-bottom: 300px;
-        display: flex;
-        align-items: center;
-      }
-
-      .news-container {
-        width: 100%;
-        background-color: #ffffff;
-      }
-
-      .news-item-container {
-        display: flex;
-        justify-content: center;
-      }
-
-      .news-item {
-        width: 300px;
-        height: 400px;
-        background-color: #d8d8d8;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        margin-bottom: 25px;
-      }
-
-      .news-item:nth-child(2) {
-        margin-left: 30px;
-        margin-right: 30px;
-      }
-
-      .news-desc {
-        width: 225px;
-        height: 180px;
-        background-color: #ffffff;
-        position: absolute;
-        bottom: -50px;
-      }
-
       .about-us-section {
         display: flex;
         flex-direction: column;
@@ -283,85 +292,32 @@
         margin-top: 150px;
       }
 
-      .believe-section {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 80px auto;
-        width: 70%;
-      }
-
-      .believe-section-description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50vw;
-        padding: 15px;
-      }
-
-      .team {
-        background-color: #ffffff;
-        margin-top: 50px;
-        width: 100%;
-      }
-
-      .team-member-container {
-        display: flex;
-        justify-content: center;
-      }
-
-      .team-member-container > article {
-        display: flex;
-        flex-direction: column;
-        margin: 35px;
-        background-color: #ffbd1b;
-      }
-
-      .team-member-container > article > h3 {
-        margin-bottom: 3px;
-      }
-
-      .team-member-container > article > span {
-        font-size: 14px;
-      }
-
-      .team-member {
-        width: 100%;
-        height: 200px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-
-      .team-member:nth-child(2) {
-        margin-left: 125px;
-        margin-right: 125px;
-      }
-
-      .team-member-detail {
-        padding: 10px;
-      }
-
-      .team-member-detail > p {
-        color: #777777;
-        display: flex;
-        justify-content: center;
-        letter-spacing: 1.2px;
-        line-height: 1.5;
-        width: 200px;
-        font-size: 12px;
-      }
-
       .contact {
-        display: flex;
-        justify-content: center;
-        width: 150px;
+        position: relative;
+        background-color: #ffffff;
+        z-index: 2;
+        width: 100%;
         height: 100px;
         margin-left: auto;
         margin-right: auto;
       }
-
-      .contact a {
+      .social-network {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      .social-network a {
         margin-right: 20px;
+      }
+
+      .copyright {
+        height: 23px;
+
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+
+        color: #090000;
       }
 
       @media screen and (max-width: 720px) {
@@ -372,86 +328,140 @@
         .main-title {
           width: 80%;
         }
-        .header > img {
-          width: 80px;
-          height: 48px;
+
+        .main-subtitle {
+          font-size: 16px;
         }
 
-        .main-title > h2 {
-          font-size: 36px;
+        .call-to-action {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
         }
 
-        .toolkit {
-          height: 300px;
+        .about-us-btn {
+          margin-bottom: 20px;
         }
 
-        .toolkit-content {
-          height: 300px;
+        .contact-us-btn {
+          font-size: 16px;
+          margin-left: 0;
         }
 
-        .toolkit-desc {
-          width: 150px;
+        .introduction {
+          padding: 40px;
+          height: 100%;
         }
-        .toolkit-desc > h2 {
-          margin-bottom: 10px;
+
+        .header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 60px;
         }
-        .toolkit-desc > h4 {
-          margin-bottom: 5px;
+
+        .logo-link {
+          margin-right: 20px;
+        }
+
+        .intro-description {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .kits-container {
+          margin-top: 30px;
+          margin-left: 0;
+          text-align: center;
+        }
+
+        .kits-img-container {
+          text-align: left;
+        }
+
+        .downloadBtn {
+          float: none;
         }
 
         .about-us-section > h2 {
           margin-top: 100px;
         }
-        .news {
-          padding-top: 150px;
-          padding-bottom: 150px;
-        }
-        .news-item-container {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .news-item {
-          margin-bottom: 50px;
-        }
-
-        .team-member-container {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .team-member {
-          width: 100%;
-          height: 150px;
-        }
 
         .contact {
           height: 125px;
         }
-        .team-member-container article {
-          margin-bottom: 50px;
-        }
 
-        .believe-section {
-          flex-direction: column;
-          align-items: center;
+        .contact-form {
+          position: relative;
+          z-index: 2;
+          background-color: #ffffff;
+          box-sizing: border-box;
+          padding: 54px;
         }
-      }
-
-      @media screen and (max-width: 540px) {
-        .header > img {
-          width: 60px;
-          height: 36px;
+        .contact-box {
+          border: 4px solid #000000;
         }
       }
     </style>
     <style amp-boilerplate>
-      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
     </style>
     <noscript>
-      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+      <style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style>
     </noscript>
   </head>
+
   <body>
     <amp-state id="section">
       <script type="application/json">
@@ -463,108 +473,157 @@
 
     <amp-animation layout="nodisplay" trigger="visibility">
       <script type="application/json">
-      {
-        "selector": "#hero-image",
-        "duration": "4s",
-        "easing": "ease-out",
-        "iterations": "infinite",
-        "keyframes": {
-          "transform": ["scale(0.9)", "scale(1)", "scale(0.9)", "scale(0.9)"]
+        {
+          "selector": "#hero-image",
+          "duration": "4s",
+          "easing": "ease-out",
+          "iterations": "infinite",
+          "fill": "both",
+          "keyframes": {
+            "transform": ["scale(0.9)", "scale(1)", "scale(0.9)"]
+          }
         }
-      }
       </script>
     </amp-animation>
 
-    <header class="header">
-      <a on="tap:top.scrollTo(duration=600)"><amp-img src="images/logo_wt.png" alt="logo" width="100" height="61"></amp-img></a>
-      <nav>
-        <a class="selected" [class]="section.currentSection == 'mission' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'mission'}}), mission.scrollTo(duration=600)">About</a>
-        <!-- <a href="#news">News</a> -->
-        <a [class]="section.currentSection == 'teams' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'teams'}}), teams.scrollTo(duration=600)">Team</a>
-        <a [class]="section.currentSection == 'contact' ? 'selected' : ''" on="tap:AMP.setState({section: {currentSection: 'contact'}}), contact.scrollTo(duration=600)">Contact</a>
-      </nav>
-    </header>
+    <amp-animation id="fadeTransition" layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": "1",
+          "fill": "none",
+          "direction": "reverse",
+          "animations": [{
+            "selector": "#top",
+            "keyframes": [{
+                "opacity": "1",
+                "offset": 0
+              },
+              {
+                "opacity": "0.2",
+                "offset": 0.3
+              },
+              {
+                "opacity": "0.2",
+                "offset": 0.7
+              },
+              {
+                "opacity": "1",
+                "offset": 1
+              }
+            ]
+          }]
+        }
+      </script>
+    </amp-animation>
+
     <section id="top" class="top">
       <div class="main-title">
-        <h1>MASHI<br/>MASHI</h1>
-        <!-- <amp-img id="hero-image" src="images/main-logo.png"  alt="hero image" width="920" height="560" sizes="(min-width: 320px) 620px, 100vw"></amp-img> -->
-        <p>We help people and organizations unlock their creativity.</p>
-        <button on="tap:contact.scrollTo(duration=600)">Say Hi! 👋</button>
+
+        <amp-img
+          id="hero-image"
+          src="images/logo_wt.png"
+          alt="hero image"
+          width="920"
+          height="560"
+          sizes="(min-width: 540px) 815px, 100vw"
+        ></amp-img>
+        <p class="main-subtitle">Unlock your creativity potential!</p>
+        <div class="call-to-action">
+          <button
+            class="about-us-btn"
+            on="tap:introduction.scrollTo(duration=600)"
+          >
+            About Us
+          </button>
+          <a
+            class="contact-us-btn"
+            href="https://creativemashimashi.typeform.com/to/zig344"
+          >
+            Contact Us 🙌
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- <section class="toolkit">
-      <div class="toolkit-content">
-        <div id="about" class="toolkit-desc">
-          <h2>AI Toolkit</h2>
-          <h4>help team,</h4>
-          <h4>brainstorming</h4>
-          <h4 class="last-desc">easier......</h4>
-          <a href="https://drive.google.com/file/d/1lN76Gv0P7OIFogHF12_rUr2W0f1hZbfh/view?usp=sharing" target="_blank">Download</a>
+    <section id="introduction" class="introduction">
+
+      <amp-position-observer
+        on="scroll:fadeTransition.seekTo(percent=event.percent)"
+        intersection-ratios="0"
+        layout="nodisplay"
+      >
+      </amp-position-observer>
+
+      <header class="header">
+        <a class="logo-link" on="tap:top.scrollTo(duration=600)"
+          ><amp-img
+            src="images/logo_bk.png"
+            alt="logo"
+            width="127"
+            height="77"
+          ></amp-img
+        ></a>
+        <a
+          class="contact-us-btn"
+          href="https://creativemashimashi.typeform.com/to/zig344"
+        >
+          Contact Us 🙌
+        </a>
+      </header>
+
+      <div class="intro-description">
+        <div class="intro-text-container">
+          <p class="intro-text">👋 Hello,</p>
+          <p class="intro-text">We are MashiMashi.</p>
+          <p class="intro-text>">
+            Our mission is unlocking people’s creative potential through design.
+          </p>
+          <p class="intro-text>">
+            We believe everyone has unlimited creativity; however, the culture
+            and social norm blocks it.
+          </p>
+          <p class="intro-text>">
+            We provide different kinds of human-centered training and workshops
+            and toolkits for people and organisation to unlock their creativity
+            potential. ❤️
+          </p>
+        </div>
+        <div class="kits-container">
+          <div class="kits-img-container">
+            <amp-img
+              id="kits-img"
+              src="images/mashi2_image.jpg"
+              alt="kits image"
+              width="633"
+              height="453"
+              sizes="(min-width: 540px) 633px, 337px"
+            ></amp-img>
+            <p class="kits-description">
+              This is 増し増し Brainstorming tool for AI services. It helps your
+              team come out with varity of ideas.
+            </p>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1lN76Gv0P7OIFogHF12_rUr2W0f1hZbfh/view"
+            class="downloadBtn"
+            >Download</a
+          >
         </div>
       </div>
-    </section> -->
-    <section id="mission" class="believe-section">
-      <div class="believe-section-description">
-        <h2>We believe</h2>
-        <p>Every human being has unlimited creativity. To unlock creative potential, we need to constant training and practicing through design activity and process. </p>
+      <div id="contact" class="contact">
+        <div class="social-network">
+          <a href="https://www.facebook.com/creativemashimashi/" target="_blank"
+            ><amp-img src="images/fb.png" width="36" height="36"></amp-img
+          ></a>
+          <a href="mailto:Creativemashimashi@gmail.com" target="_blank"
+            ><amp-img src="images/mail.png" width="36" height="36"></amp-img
+          ></a>
+          <a href="https://twitter.com/creativemashi2" target="_blank"
+            ><amp-img src="images/twitter.png" width="36" height="36"></amp-img
+          ></a>
+        </div>
+        <div class="copyright">©2019 Mashimahsi, Inc</div>
       </div>
-      <amp-img src="images/mashi2_image.jpg" alt="believe image" layout="responsive"  sizes="50vw" width="1.52"
-      height="1"></amp-img>
-    </section>
-    <section class="believe-section">
-      <amp-img src="images/mashi2_image.jpg" alt="believe image" layout="responsive" sizes="50vw"></amp-img>
-      <div class="believe-section-description">
-        <h2>We believe</h2>
-        <p>Every human being has unlimited creativity. To unlock creative potential, we need to constant training and practicing through design activity and process. </p>
-      </div>
-    </section>
-    <section id="workshop" class="team">
-      <h2 class="section-title">Workshops</h2>
-      <div class="team-member-container">
-        <article>
-          <div class="team-member" style="background-image:url('images/mashi2_image.jpg')"></div>
-          <div class="team-member-detail">
-            <h3>TBD</h3>
-            <span>First workshop</span>
-            <p>I believe everyone has creative potential. Let’s unlock it with design!</p>
-          </div>
-        </article>
-        <article>
-          <div class="team-member" style="background-image:url('images/mashi2_image.jpg')"></div>
-          <div class="team-member-detail">
-            <h3>TBD</h3>
-            <span>Second workshop</span>
-            <p>I believe everyone has creative potential. Let’s unlock it with design!</p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section id="teams" class="team">
-      <h2 class="section-title">Team</h2>
-      <p class="section-sub-title">To make the world running with creative solutions that truly enhance people’s happiness.</p>
-      <div class="team-member-container">
-        <article>
-          <div class="team-member" style="background-image:url('images/jasper.png')"></div>
-          <div class="team-member-detail">
-            <h3>Jasper Wu</h3>
-            <span>Designer</span>
-            <p>I believe everyone has creative potential. Let’s unlock it with design!</p>
-          </div>
-        </article>
-        <article>
-          <div class="team-member" style="background-image:url('images/bible.png')"></div>
-          <div class="team-member-detail">
-            <h3>Paipo Tang</h3>
-            <span>Engineer</span>
-            <p>More and more abstraction layers of engineering strengthen the importance of design!</p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section id="contact" class="contact">
-      <a href="https://www.facebook.com/creativemashimashi/" target="_blank"><amp-img src="images/fb.png" width="36" height="36"></amp-img></a>
-      <a href="mailto:Creativemashimashi@gmail.com" target="_blank"><amp-img src="images/mail.png" width="36" height="36" ></amp-img></a>
     </section>
 
   </body>
