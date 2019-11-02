@@ -26,4 +26,4 @@ jobs:
 
       - run:
           name: Deploy the app
-          command: gcloud app deploy
+          command: gcloud --quiet app deploy
