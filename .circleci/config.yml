@@ -33,7 +33,6 @@ workflows:
   build:
     jobs:
       - deploy:
-          type: approval
           filters:
             branches:
               only: master
