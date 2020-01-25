@@ -70,18 +70,13 @@
       }
 
       .top {
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
         display: flex;
-        background-color: #00d1ff;
+        background-color: #FF971E;
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        margin-bottom: 36px;
         color: #ffffff;
       }
 
@@ -190,6 +185,113 @@
 
       .contact-us-btn:hover {
         opacity: 0.8;
+      }
+
+      .promotion {
+        position: relative;
+      }
+
+      .boost {
+        width: 100%;
+        height: 825px;
+        background: #DF824D;
+        padding-top: 50px;
+        padding-left: 76px;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        position: relative;
+        z-index: 2;
+      }
+
+      .boost-title {
+        width: 683px;
+        height: 430px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 100px;
+        line-height: 144px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+      }
+
+      .boost button {
+        width: 267px;
+        height: 70px;
+        color: #ffffff;
+        background: #000000;
+        border-radius: 8px;
+      }
+
+      .jasper-background {
+        position: relative;
+        top: -200px;
+        z-index: 1;
+      }
+
+      .unlock-creativity-title {
+        position: absolute;
+        z-index: 3;
+        width: 725px;
+        height: 451px;
+        left: 76px;
+        top: 865px;
+        font-family: Roobert;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 120px;
+        line-height: 144px;
+        color: #DF824D;
+      }
+
+      .why-us {
+        position: relative;
+        z-index: 3;
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        background: #6BB0D7;
+        width: 100%;
+        height: 825px;
+        top: -500px;
+        display: flex;
+        justify-content: space-between;
+        color: #ffffff;
+        padding: 286px 39px 0 160px;
+        box-sizing: border-box;
+      }
+
+      .why-us-left p {
+        width: 339px;
+        height: 101px;
+        font-family: Roobert;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 48px;
+        color: #FFFFFF;
+      }
+
+      .why-us-right {
+        width: 597px;
+        height: 144px;
+      }
+
+      .why-us-right h2 {
+        margin: 0;
+        font-family: Roobert;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 100px;
+        line-height: 144px;
+        color: #FFFFFF;
+      }
+
+      .why-us-right p {
+        width: 100%;
+        font-family: Roobert;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 29px;
+
+        color: #FFFFFF;
       }
 
       .introduction {
@@ -627,8 +729,36 @@
         </div>
       </div>
     </section>
-
-    <section id="introduction" class="introduction">
+    <section class="promotion">
+      <div class="boost">
+        <h2 class="boost-title">Boost to an innovation success</h2>
+        <button>I'm interested😍</button>
+      </div>
+      <amp-img
+        class="jasper-background"
+        src="images/jasper.png"
+        alt="jasper presentation"
+        width="1.5"
+        height="1"
+        layout="responsive"
+      ></amp-img>
+      <h2 class="unlock-creativity-title">Unlock your creativity</h2>
+      <div class="why-us">
+        <div class="why-us-left">
+          <p>Minimum cost & risk</p>
+          <p>Customer-Centered</p>
+          <p>Fast interation</p>
+        </div>
+        <div class="why-us-right">
+          <h2>Why us 🤔</h2>
+          <p>We believe everyone has unlimited creativity; however, the culture and social norm blocks it.</p>
+          <p>
+             We provide different kinds of human-centered training and workshops and toolkits for people and organisation to unlock their creativity potential.❤
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="introduction" class="introduction">
       <amp-position-observer
         on="scroll:fadeTransition.seekTo(percent=event.percent)"
         intersection-ratios="0"
@@ -671,11 +801,6 @@
             toolkits for people and organizations to unlock and discover their
             creative potentials.
           </p>
-          <!-- <p class="intro-text>">
-            We provide different kinds of human-centered training, workshops and
-            toolkits for people and organisations to unlock their creativity
-            potential. ❤️
-          </p> -->
         </div>
         <div class="kits-container">
           <div class="kits-img-container">
@@ -769,6 +894,6 @@
         </div>
         <div class="copyright">©2019 MashiMashi, Inc</div>
       </div>
-    </section>
+    </section> -->
   </body>
 </html>
