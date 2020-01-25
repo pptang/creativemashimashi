@@ -13,7 +13,18 @@ Check it out: [増し増し](http://www.creativemashimashi.com)
 
 It's a static AMP page, so you can just open `index.html`.
 
-## How to deploy
+## Test in staging
+You can utilize `gh-pages` branch for staging change.
+After making commits and push to `gh-pages` branch, you can access the website with:
+https://pptang.github.io/creativemashimashi/www/
+
+## Deploy automatically
+Every merge to `master` branch will trigger the CI/CD and deploy to production.
+
+Website url: http://www.creativemashimashi.com/
+
+
+## How to deploy manually
 
 Run
 
