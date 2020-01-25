@@ -223,7 +223,7 @@
 
       .jasper-background {
         position: relative;
-        top: -200px;
+        margin-top: -200px;
         z-index: 1;
       }
 
@@ -249,7 +249,7 @@
         background: #6BB0D7;
         width: 100%;
         height: 825px;
-        top: -500px;
+        margin-top: -200px;
         display: flex;
         justify-content: space-between;
         color: #ffffff;
@@ -294,6 +294,96 @@
         color: #FFFFFF;
       }
 
+      .design-sprint {
+        position: relative;
+      }
+
+      .polygon-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        height: 100%;
+        width: 60%;
+        display: flex;
+        align-items: center;
+      }
+
+      .polygon-container h2 {
+        font-family: Roobert;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 120px;
+        line-height: 144px;
+        color: #ffffff;
+      }
+
+      .design-sprint-polygon {
+        left: 0;
+        clip-path:polygon(0 0, 100% 0, 50% 100%, 0 100%);
+        background-color: #BB5CB7;
+      }
+
+      .design-sprint-polygon h2 {
+        margin-left: 100px;
+        max-width: 300px;
+      }
+
+      .design-thinking-workshop {
+        position: relative;
+      }
+
+      .design-thinking-workshop-polygon {
+        right: 0;
+        clip-path:polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+        background-color: #DD6A93;
+        justify-content: flex-end;
+      }
+
+      .design-thinking-workshop-polygon h2 {
+        max-width: 555px;
+        margin-right: 100px;
+        text-align: right;
+      }
+
+      .grey-spacer {
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #F1F1F1;
+        height: 120px;
+        width: 100%;
+      }
+
+      .book-container {
+        display: flex;
+        margin: 85px 75px 140px;
+      }
+
+      .book-description {
+        width: 633px;
+        position: relative;
+      }
+
+      .book-description h2 {
+        font-family: Roobert;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 120px;
+        line-height: 144px;
+        text-align: left;
+        color: #090000;
+        margin: 0;
+      }
+
+      .purchaseBtn {
+        position: absolute;
+        right: 75px;
+        margin-top: -90px;
+      }
+
+      .book-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .introduction {
         position: relative;
         background-color: #ffffff;
@@ -329,33 +419,36 @@
       }
 
       .kits-container {
-        margin-left: 50px;
+        margin-left: 75px;
+        margin-right: 75px;
         text-align: center;
-      }
-
-      .kits-img-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #f8f8f8;
-        padding: 25px;
-        margin-bottom: 20px;
+        margin-bottom: 105px;
       }
 
       .kits-img {
         flex: 1;
       }
 
-      .kits-description {
-        font-size: 14px;
-        color: #090000;
-        max-width: 633px;
-        margin: 20px 0 0 0;
-        text-align: left;
+      .kits-text-container {
+        margin: auto;
+        max-width: 566px;
       }
 
-      .try-btn {
-        margin: 0;
+      .kits-title {
+        font-family: Roobert;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 80px;
+        line-height: 144px;
+        color: #090000;
+        margin: auto;
+      }
+
+      .kits-description {
+        font-size: 24px;
+        color: #090000;
+        text-align: left;
       }
 
       .downloadBtn {
@@ -545,10 +638,6 @@
         .kits-container {
           margin-top: 30px;
           margin-left: 0;
-        }
-
-        .kits-img-container {
-          text-align: left;
         }
 
         .downloadBtn {
@@ -753,9 +842,92 @@
           <h2>Why us 🤔</h2>
           <p>We believe everyone has unlimited creativity; however, the culture and social norm blocks it.</p>
           <p>
-             We provide different kinds of human-centered training and workshops and toolkits for people and organisation to unlock their creativity potential.❤
+             We provide different kinds of human-centered training and workshops and toolkits for people and organisation to unlock their creativity potential.❤️
           </p>
         </div>
+      </div>
+    </section>
+    <section class="design-sprint">
+      <div class="polygon-container design-sprint-polygon">
+        <h2>Design Sprint</h2>
+      </div>
+      <amp-img
+        class="design-sprint-background"
+        src="images/jasper.png"
+        alt="jasper presentation"
+        width="1.5"
+        height="1"
+        layout="responsive"
+      ></amp-img>
+    </section>
+    <section class="design-thinking-workshop">
+      <amp-img
+        class="design-thinking-workshop-background"
+        src="images/jasper.png"
+        alt="jasper presentation"
+        width="1.5"
+        height="1"
+        layout="responsive"
+      ></amp-img>
+      <div class="polygon-container design-thinking-workshop-polygon">
+        <h2>Design Thinking Workshop</h2>
+      </div>
+    </section>
+    <div class="grey-spacer"></div>
+    <section class="content">
+      <div class="book-container">
+        <div class="book-description">
+          <h2>Design Thinking Book</h2>
+          <a
+          href="#"
+          class="downloadBtn purchaseBtn">Purchase</a>
+        </div>
+        
+        <amp-img
+          class="book-img"
+          src="images/book.png"
+          alt="design thinking book image"
+          width="276"
+          height="408"
+          layout="fixed"
+        ></amp-img>
+      </div>
+      <div class="kits-container">
+        <amp-img
+          id="kits-img"
+          src="images/mashi2_image.jpg"
+          alt="kits image"
+          width="633"
+          height="453"
+          sizes="(min-width: 540px) 633px, 337px"
+        ></amp-img>
+        <div class="kits-text-container">
+          <h2 class="kits-title">
+            AI ToolKit
+          </h2>
+          <p class="kits-description">
+            This is 増し増し Brainstorming tool for AI services. It helps your
+            team come out with various of ideas.
+          </p>
+          <p class="try-btn">Try it!👇</p>
+          <a
+          href="https://drive.google.com/file/d/1lN76Gv0P7OIFogHF12_rUr2W0f1hZbfh/view"
+          class="downloadBtn">Download</a>
+        </div>
+      </div>
+      <div id="contact" class="contact">
+        <div class="social-network">
+          <a href="https://www.facebook.com/creativemashimashi/" target="_blank"
+            ><amp-img src="images/fb.png" width="36" height="36"></amp-img
+          ></a>
+          <a href="mailto:Creativemashimashi@gmail.com" target="_blank"
+            ><amp-img src="images/mail.png" width="36" height="36"></amp-img
+          ></a>
+          <a href="https://twitter.com/creativemashi2" target="_blank"
+            ><amp-img src="images/twitter.png" width="36" height="36"></amp-img
+          ></a>
+        </div>
+        <div class="copyright">©2019 MashiMashi, Inc</div>
       </div>
     </section>
     <!-- <section id="introduction" class="introduction">
