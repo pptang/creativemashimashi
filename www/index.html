@@ -71,13 +71,18 @@
 
       .top {
         display: flex;
-        background-color: #FF971E;
+        background: #FF971E;
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
         color: #ffffff;
+        transition: background 2s ease;
+      }
+
+      .top:hover {
+        background-color: #DF824D;
       }
 
       h1 {
@@ -200,6 +205,11 @@
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
         position: relative;
         z-index: 2;
+        transition: background 2s ease;
+      }
+      
+      .boost:hover {
+        background: #FF971E;
       }
 
       .boost-title {
@@ -255,6 +265,11 @@
         color: #ffffff;
         padding: 286px 39px 0 160px;
         box-sizing: border-box;
+        transition: background 1.5s ease;
+      }
+
+      .why-us:hover {
+        background: rgb(47, 144, 156);
       }
 
       .why-us-left p {
@@ -321,7 +336,12 @@
       .design-sprint-polygon {
         left: 0;
         clip-path:polygon(0 0, 100% 0, 50% 100%, 0 100%);
-        background-color: #BB5CB7;
+        background: #BB5CB7;
+        transition: background 2s ease;
+      }
+
+      .design-sprint-polygon:hover {
+        background: #DD6A93;
       }
 
       .design-sprint-polygon h2 {
@@ -336,8 +356,13 @@
       .design-thinking-workshop-polygon {
         right: 0;
         clip-path:polygon(50% 0, 100% 0, 100% 100%, 0 100%);
-        background-color: #DD6A93;
+        background: #DD6A93;
         justify-content: flex-end;
+        transition: background 2s ease;
+      }
+
+      .design-thinking-workshop-polygon:hover {
+        background: #BB5CB7;
       }
 
       .design-thinking-workshop-polygon h2 {
