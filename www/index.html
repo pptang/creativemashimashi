@@ -105,7 +105,7 @@
       }
 
       nav a:before {
-        content: "";
+        content: '';
         position: absolute;
         width: 100%;
         height: 3px;
@@ -169,8 +169,7 @@
         background-color: #ffffff;
         color: #000000;
       }
-
-      .contact-us-btn {
+      .btn {
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -184,12 +183,20 @@
         font-weight: bold;
         text-decoration: none;
         margin-left: 23px;
-        background-color: #ff4242;
-        color: #ffffff;
       }
 
-      .contact-us-btn:hover {
+      .btn:hover {
         opacity: 0.8;
+      }
+
+      .product-btn {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .contact-us-btn {
+        background-color: #ff4242;
+        color: #ffffff;
       }
 
       .introduction {
@@ -615,6 +622,13 @@
         ></amp-img>
         <p class="main-subtitle">Unlock your creativity potential!</p>
         <div class="call-to-action">
+          <a
+            class="btn product-btn"
+            href="https://dowel.creativemashimashi.com/"
+            target="_blank"
+          >
+            Product
+          </a>
           <button
             class="about-us-btn"
             on="tap:introduction.scrollTo(duration=600)"
@@ -622,7 +636,7 @@
             About Us
           </button>
           <a
-            class="contact-us-btn"
+            class="btn contact-us-btn"
             href="mailto:jasperwu314@gmail.com"
             target="_blank"
           >
