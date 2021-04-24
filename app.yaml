@@ -1,5 +1,6 @@
 runtime: python27
-api_version: 3
+# This should be 1, or we'll get error: https://cloud.google.com/appengine/docs/standard/python/config/appref
+api_version: 1
 threadsafe: true
 
 handlers:
